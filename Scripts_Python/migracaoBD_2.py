@@ -50,7 +50,7 @@ def gravandoBD(tabela, df):
     database = 'banco_transacao' 
     try:
         if (username!=''):
-            cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+            cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
         else:
             cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes;')
             
@@ -105,7 +105,7 @@ username = ''
 password = ''
 
 server= input("Server:  ")
-resp=int(input("Digitar usuário e senha? (1-sim  2-não)"))
+resp=int(input("Digitar usuário e senha? (1-sim  2-não): "))
 if(resp==1):
     username=input('Usuário: ')
     password = input('password: ')
