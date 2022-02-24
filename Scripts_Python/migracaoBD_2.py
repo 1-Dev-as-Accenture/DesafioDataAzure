@@ -83,7 +83,8 @@ def gravandoBD(tabela, df):
         cnxn.commit()
         cursor.close()
     except pyodbc.Error as ex:
-        print("Falha na conexao")        
+        a=1
+           
             
     
 
